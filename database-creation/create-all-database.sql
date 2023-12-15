@@ -1,5 +1,6 @@
-CREATE DATABASE world_disasters;
+CREATE DATABASE world_disasters ;
 
+USE world_disasters  ; 
 -- Create the disaster table
 CREATE TABLE disaster (
     Disaster_ID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -144,7 +145,7 @@ VALUES
 (10, 10); -- Disaster ID 10, Person ID 10
 
  
-USE world_disasters;
+-- USE world_disasters;
 
 -- Create the Country table
 CREATE TABLE Country (
@@ -169,7 +170,7 @@ VALUES
 
 
 
-USE world_disasters;
+-- USE world_disasters;
 
 
 -- Create the disaster_situation table with the foreign key
@@ -203,7 +204,7 @@ VALUES
 
 
 
-USE world_disasters;
+-- USE world_disasters;
 
 -- Create the NGO table
 CREATE TABLE NGO (
