@@ -19,7 +19,7 @@ SELECT d.disaster_name , d.deaths  , d.injured , d.missing
 FROM disaster d 
 WHERE d.continent = 'Asia' ;
 
--- posoi anthropoi ano ton 20 pethanan apo katastrofi chernobyl 
+-- posoi anthropoi ano ton 30 (change it) pethanan apo katastrofi chernobyl 
 
 -- INSERT INTO disaster_affected_person (disaster_id, person_id)
 -- VALUES
