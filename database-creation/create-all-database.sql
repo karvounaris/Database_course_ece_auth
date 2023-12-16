@@ -150,12 +150,12 @@ VALUES
 -- Create the Country table
 CREATE TABLE Country (
     population INT,
-    GDB DECIMAL(10, 2),
+    GDP DECIMAL(10, 2),
     country_name VARCHAR(255) PRIMARY KEY NOT NULL
 );
 
 -- Insert 10 rows into the Country table
-INSERT INTO Country (population, GDB, country_name)
+INSERT INTO Country (population, GDP, country_name)
 VALUES
 (10000000, 500000.00, 'CountryA'),
 (5000000, 200000.00, 'CountryB'),
@@ -175,20 +175,20 @@ VALUES
 
 -- Create the disaster_situation table with the foreign key
 CREATE TABLE disaster_situation (
-    RGDB INT,
-    disasterSituationID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    RGDP INT,
+    disasterSituationID INT,
     financial_aid DECIMAL(10, 2),
     recovery_time INT,
     Total_cost DECIMAL(10, 2),
     Plan_title VARCHAR(255),
     country_name VARCHAR(255),
-    CONSTRAINT fk_disaster_country
+    PRIMARY KEY (disasterSituationID, country_name),
     FOREIGN KEY (country_name) REFERENCES Country(country_name),
-	FOREIGN KEY (disasterSituationID) REFERENCES Disaster(Disaster_ID)
+    FOREIGN KEY (disasterSituationID) REFERENCES Disaster(Disaster_ID)
 );
 
 -- Insert 10 rows into the disaster_situation table with the foreign key
-INSERT INTO disaster_situation (RGDB, financial_aid, recovery_time, Total_cost, Plan_title, country_name)
+INSERT INTO disaster_situation (RGDP, financial_aid, recovery_time, Total_cost, Plan_title, country_name)
 VALUES
 (1, 5000.00, 30, 100000.00, 'Recovery Plan A', 'CountryA'),
 (2, 10000.00, 45, 150000.00, 'Recovery Plan B', 'CountryB'),
