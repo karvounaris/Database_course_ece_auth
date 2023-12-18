@@ -1,8 +1,7 @@
 #--------------1----------------------
 SELECT d.disaster_name, d.start_date, d.deaths, ds.total_cost
 FROM disaster_situation as ds 
-JOIN disaster as d 
-ON ds.disaster_id = d.disaster_id
+JOIN disaster as d ON ds.disaster_id = d.disaster_id
 
 
 #------------2-------------------
