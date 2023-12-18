@@ -1,3 +1,12 @@
 #--------------1----------------------
 SELECT d.disaster_name, d.start_date, d.deaths, ds.total_cost
-FROM disaster_situation as ds JOIN disaster as d ON ds.disaster_id = d.disaster_id
+FROM disaster_situation as ds 
+JOIN disaster as d 
+ON ds.disaster_id = d.disaster_id
+
+
+#------------2-------------------
+SELECT p.person_name, p.person_surname, p.age, d.disaster_name, d.Base_location, year(d.start_date)
+FROM disaster_affected_person as dap 
+JOIN person as p ON dap.person_id = p.person_id
+JOIN disaster as d ON dap.disaster_id = d.disaster_id
