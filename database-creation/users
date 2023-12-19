@@ -1,0 +1,5 @@
+#-------------create admin------------------
+drop user sadmin@localhost;
+flush privileges;
+CREATE USER 'sadmin'@'localhost' IDENTIFIED BY 'test123';
+GRANT ALL PRIVILEGES ON world_disasters.* TO 'sadmin'@'localhost';
