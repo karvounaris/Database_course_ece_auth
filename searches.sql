@@ -1,6 +1,6 @@
 USE world_disasters ; 
 SELECT * FROM disaster
-WHERE start_date > '2023-07-01' ; 
+WHERE start_date > '1700-07-01' ; 
 
 SELECT d.Disaster_name , ds.Total_cost , ds.country_name  
 FROM disaster d 
@@ -40,7 +40,7 @@ FROM disaster d
 JOIN disaster_affected_person dap 
 ON d.disaster_id = dap.disaster_id
 JOIN person p ON dap.person_id = p.person_id
-WHERE d.disaster_name = 'Chernobyl' AND p.age > 30 ; 
+WHERE d.disaster_name = 'Chernobyl' AND p.age > 20 ; 
  
  
  -- 4. Poses gynaikes pethanan sto Chernobyl 
@@ -63,9 +63,9 @@ WHERE deaths  = (
 
 -- 8. poso kostise se ka9e xora synolika oles oi megales katastrofes 
 
-INSERT INTO disaster_situation (RGDP, financial_aid, recovery_time, Total_cost, Plan_title, country_name, disaster_id)
-VALUES
-(1, 5000.00, 30, 200000.00, 'Recovery Plan A', 'CountryA', 1) ; 
+-- INSERT INTO disaster_situation (RGDP, financial_aid, recovery_time, Total_cost, Plan_title, country_name, disaster_id)
+-- VALUES
+-- (1, 5000.00, 30, 200000.00, 'Recovery Plan A', 'CountryA', 1) ; 
 
 SELECT c.country_name , SUM(ds.total_cost)  
 FROM country c
@@ -75,9 +75,9 @@ JOIN disaster_situation  ds
  
  -- 7 zevgaria xoron pou exoun ypostei tin idia katastrofi 
  
-INSERT INTO disaster_situation (RGDP, financial_aid, recovery_time, Total_cost, Plan_title, country_name, disaster_id)
-VALUES
-(1, 5000.00, 30, 200000.00, 'Recovery Plan A', 'CountryD', 3) ; 
+-- INSERT INTO disaster_situation (RGDP, financial_aid, recovery_time, Total_cost, Plan_title, country_name, disaster_id)
+-- VALUES
+-- (1, 5000.00, 30, 200000.00, 'Recovery Plan A', 'CountryD', 3) ; 
  
 
 -- Using c.country_name < b.country_name instead of c.country_name != b.country_name ensures that you avoid duplicates in the output. 
@@ -97,9 +97,9 @@ JOIN disaster d
 
 
 -- 5 This might be wrong cause i dont have the updated version of the word 
-INSERT INTO Building (street, street_number, postal_code, disasterSituationID, monument, damage_type, reconstruction_cost, constructed_year)
-VALUES
-('Egnatia Lane', '789', '71456', 1, TRUE, 'MAJOR ISSUES', 75000.00, 1985) ; 
+-- INSERT INTO Building (street, street_number, postal_code, disasterSituationID, monument, damage_type, reconstruction_cost, constructed_year)
+-- VALUES
+-- ('Egnatia Lane', '789', '71456', 1, TRUE, 'MAJOR ISSUES', 75000.00, 1985) ; 
 
 SELECT d.disaster_name , SUM(b.reconstruction_cost) , ds.total_cost   -- , c.country_name  
 FROM disaster_situation ds 
