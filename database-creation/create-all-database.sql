@@ -305,7 +305,7 @@ VALUES
 CREATE TABLE Disease (
     disease_id INT AUTO_INCREMENT NOT NULL,
     disaster_situation_id INT,
-    PRIMARY KEY (disease_id, disaster_situation_id),
+    PRIMARY KEY (disease_id),
     FOREIGN KEY (disaster_situation_id) REFERENCES disaster_situation(disasterSituationID),
     disease_name VARCHAR(255),
     affected INT,

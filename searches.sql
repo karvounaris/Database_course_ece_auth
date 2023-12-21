@@ -1,4 +1,7 @@
 USE world_disasters ; 
+
+-- dummy examples -- 
+
 SELECT * FROM disaster
 WHERE start_date > '1700-07-01' ; 
 
