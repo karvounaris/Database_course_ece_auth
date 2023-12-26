@@ -1,0 +1,110 @@
+<mat-drawer-container autosize>
+  <div class="sidebar close">
+    <div class="sidebarBtn">
+      <i class="bx bx-menu"><mat-icon fontIcon="home"></mat-icon></i>
+
+      <span class="text">Dashboard</span>
+    </div>
+
+    <ul class="nav-links">
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i class="">
+              <mat-icon class="sidebar-icon">timeline</mat-icon>
+            </i>
+            <span class="link_name">Graphs</span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li>
+            <button
+              title="Create Real Time Graph"
+              mat-button
+              color="orange"
+              routerLink="/disaster"
+            >
+              Create Real Time Graph
+            </button>
+          </li>
+          <li>
+            <button title="Create Archive Graph" mat-button color="orange">
+              Create Archive Graph
+            </button>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i><mat-icon class="sidebar-icon">upload 2</mat-icon></i>
+            <span class="link_name">Telecommands</span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li>
+            <button mat-button title="Telecommands" color="orange">
+              Send a Telecommand
+            </button>
+            <button mat-button title="Telecommand History" color="orange">
+              Telecommand History
+            </button>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i><mat-icon class="sidebar-icon">imagesmode</mat-icon></i>
+            <span class="link_name">Buckets</span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li>
+            <button mat-button title="Telecommands" color="orange">
+              List buckets
+            </button>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i><mat-icon class="sidebar-icon">folder</mat-icon></i>
+            <span class="link_name">Telemetry</span>
+          </a>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li>
+            <button mat-button title="Telemetry Table" color="orange">
+              Telemetry Table
+            </button>
+          </li>
+        </ul>
+      </li>
+
+      <!--- Dummy data.  --->
+      <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img
+              class="acube"
+              src="https://spacedot.gr/wp-content/uploads/2020/12/acubesat-spacedot-logo.png"
+            />
+          </div>
+          <div class="name-job">
+            <div class="profile_name">SpaceDot Team</div>
+            <div class="job">Spacecraft Operations</div>
+          </div>
+          <i class="bx bx-log-out"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+</mat-drawer-container>

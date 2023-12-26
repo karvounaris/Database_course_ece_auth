@@ -1,0 +1,17 @@
+<div class="webpage-container">
+  <app-header></app-header>
+  <mat-drawer-container class="body-container" autosize>
+    <mat-drawer #drawer class="sidenav-drawer" mode="side" opened="true">
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <div class="toggle-sidenav-drawer">
+        <button mat-button (click)="drawer.toggle()"></button>
+      </div>
+      <router-outlet></router-outlet>
+      <!-- <app-archive-telemetry></app-archive-telemetry> -->
+
+      <div class="board"></div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

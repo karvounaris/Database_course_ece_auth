@@ -53,7 +53,7 @@ FROM disaster d
 JOIN disaster_affected_person dap 
 ON d.disaster_id = dap.disaster_id
 JOIN person p ON dap.person_id = p.person_id
-WHERE d.disaster_name = 'Chernobyl' AND p.gender = 'Female' ; 
+WHERE d.disaster_name = 'Chernobyl Disaster' AND p.gender = 'Female' ; 
 
 -- 6. poia katastrofi eixe tous perissoterous nekrous 
 
