@@ -113,6 +113,9 @@
   opacity: 0.85;
   transition: all 0.3s ease;
 }
+button {
+  background: #202020;
+}
 button:hover {
   background: #275c62;
   overflow: visible;
@@ -221,6 +224,7 @@ button:hover {
 }
 
 button {
+  color: aliceblue !important;
   text-align: left;
   display: block;
   cursor: pointer;

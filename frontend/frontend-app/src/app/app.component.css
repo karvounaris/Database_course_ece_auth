@@ -120,8 +120,15 @@ mat-drawer {
   right: 0;
 }
 
+.mat-drawer-content {
+  background: #404040;
+}
+
 /* mat-drawer-container { 
     background-image: url("https://spacedot.gr/wp-content/uploads/2020/12/spacedot_logotype_neg-1024x307.png") ; 
     background-repeat: no-repeat ; 
     background-position: center; 
   } */
+* {
+  color: aliceblue;
+}

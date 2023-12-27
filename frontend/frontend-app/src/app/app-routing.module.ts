@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DisasterComponent } from './components/disaster/disaster.component';
+import { MediaComponent } from './components/media/media.component';
+import { PersonComponent } from './components/person/person.component';
+import { CountryComponent } from './components/country/country.component';
 
 const routes: Routes = [];
 
@@ -10,7 +13,10 @@ const appRoutes: Routes = [
     pathMatch: "full",
     redirectTo: "",
   },
-  { path: "disaster", component: DisasterComponent }
+  { path: "disaster", component: DisasterComponent }, 
+  { path: "media", component: MediaComponent },
+  { path: "person", component: PersonComponent }, 
+  { path: "countries", component: CountryComponent }
   
 ];
 

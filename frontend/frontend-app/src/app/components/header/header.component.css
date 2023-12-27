@@ -5,9 +5,9 @@ div {
 
 /* next 2 work together to render the images correctly inside the toolbar */
 
-img {
-  height: 95%;
-  width: auto;
+h2 {
+  color: aliceblue;
+  text-align: center;
 }
 
 div.images {
@@ -44,6 +44,7 @@ mat-icon {
 }
 
 .username {
+  color: aliceblue;
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
@@ -70,4 +71,13 @@ mat-select:hover {
 
 mat-option {
   font-style: bold;
+}
+
+mat-toolbar {
+  background-color: #202020;
+}
+
+div.title {
+  position: absolute;
+  right: 50%;
 }

@@ -1,18 +1,14 @@
 <!-- Toolbar -->
 
-<mat-toolbar color="primary" class="app-header">
+<mat-toolbar class="app-header">
   <mat-icon>face</mat-icon>
 
-  <div class="username">Spacecraft Operations</div>
+  <div class="username">Admin</div>
 
+  <div class="title">
+    <h2>World Disasters</h2>
+  </div>
   <div class="images">
-    <a target="_blank" href="https://spacedot.gr/">
-      <img
-        class="spacedot"
-        src="https://spacedot.gr/wp-content/uploads/2020/12/spacedot_logotype_neg.png"
-      />
-    </a>
-
     <button mat-button class="acube">
       <mat-icon>query_builder</mat-icon>
       <a> {{ greekTime | date : "dd/MM/YYYY HH:mm:ss" }} UTC</a>
