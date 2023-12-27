@@ -1,7 +1,7 @@
 <mat-drawer-container autosize>
   <div class="sidebar close">
     <div class="sidebarBtn">
-      <i class="bx bx-menu"><mat-icon fontIcon="home"></mat-icon></i>
+      <i class="bx bx-menu"><mat-icon fontIcon="dashboard"></mat-icon></i>
 
       <span class="text">Dashboard</span>
     </div>
@@ -12,7 +12,7 @@
           <button routerLink="/disaster">
             <a>
               <i class="">
-                <mat-icon class="sidebar-icon">timeline</mat-icon>
+                <mat-icon class="sidebar-icon" fontIcon="flood"></mat-icon>
               </i>
               <span class="link_name">Disasters</span>
             </a>
@@ -25,29 +25,21 @@
         <div class="iocn-link">
           <button routerLink="/media" class="link_name">
             <a>
-              <i><mat-icon class="sidebar-icon">upload 2</mat-icon></i>
+              <i><mat-icon class="sidebar-icon" fontIcon="tv"></mat-icon></i>
 
               <span class="link_name">Media Articles</span>
             </a>
             <i class="bx bxs-chevron-down arrow"></i>
           </button>
         </div>
-        <ul class="sub-menu">
-          <li>
-            <button mat-button title="Telecommands" color="orange">
-              Send a Telecommand
-            </button>
-            <button mat-button title="Telecommand History" color="orange">
-              Telecommand History
-            </button>
-          </li>
-        </ul>
       </li>
       <li>
         <div class="iocn-link">
           <button routerLink="/person" class="link_name">
             <a>
-              <i><mat-icon class="sidebar-icon">imagesmode</mat-icon></i>
+              <i
+                ><mat-icon class="sidebar-icon" fontIcon="people"></mat-icon
+              ></i>
               <span class="link_name">People</span>
             </a>
 
@@ -63,7 +55,7 @@
             routerLinkActive="router-link-active"
           >
             <a>
-              <i><mat-icon class="sidebar-icon">folder</mat-icon></i>
+              <i><mat-icon class="sidebar-icon" fontIcon="flag"></mat-icon></i>
               <span class="link_name">Countries</span>
             </a>
             <i class="bx bxs-chevron-down arrow"></i>
