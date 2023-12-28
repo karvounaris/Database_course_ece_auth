@@ -1,6 +1,28 @@
-<p>country works!</p>
-<div *ngFor="let country of countries">
-  {{ country.country_name }}
-  {{ country.GDP }}
-  {{ country.population }}
-</div>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let country of countries">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ country.country_name }}
+      </mat-panel-title>
+
+      <button
+        mat-icon-button
+        color="warn"
+        (click)="deleteCountry(country.country_name)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-expansion-panel-header>
+
+    <p>Population: {{ country.population / 1000000 }} million</p>
+    <p>GDP: ${{ country.GDP }}</p>
+  </mat-expansion-panel>
+</mat-accordion>
+<button
+  mat-raised-button
+  [routerLink]="['/country-form']"
+  routerLinkActive="router-link-active"
+  color="secondary"
+>
+  Add new country
+</button>

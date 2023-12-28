@@ -1,6 +1,39 @@
-<p>disaster works!</p>
-<div *ngFor="let disaster of disasters">
-  {{ disaster.Disaster_name }}
-  {{ disaster.deaths }}
-  {{ disaster.injured }}
+<div class="mat-table-container">
+  <mat-form-field>
+    <input
+      class="custom-search-field"
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Filter"
+    /><mat-icon matPrefix> search</mat-icon>
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource" class="mat-table" matSort>
+    <!-- Disaster Name Column -->
+    <ng-container matColumnDef="disaster_name">
+      <mat-header-cell *matHeaderCellDef>Disaster Name</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.Disaster_name }}</mat-cell>
+    </ng-container>
+
+    <!-- Deaths Column -->
+    <ng-container matColumnDef="deaths">
+      <mat-header-cell *matHeaderCellDef>Deaths</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.deaths }}</mat-cell>
+    </ng-container>
+
+    <!-- Injured Column -->
+    <ng-container matColumnDef="injured">
+      <mat-header-cell *matHeaderCellDef>Injured</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.injured }}</mat-cell>
+    </ng-container>
+
+    <!-- Continent Column -->
+    <ng-container matColumnDef="continent">
+      <mat-header-cell *matHeaderCellDef>Continent</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.Continent }}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </table>
 </div>

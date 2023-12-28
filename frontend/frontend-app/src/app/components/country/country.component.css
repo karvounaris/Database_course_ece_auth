@@ -1,0 +1,10 @@
+/* Add this style to your component's CSS or styles.scss file */
+.mat-expansion-panel {
+  background-color: #303030;
+  color: aliceblue; /* Set text color to white or any contrasting color */
+}
+
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  color: aliceblue;
+}

@@ -24,6 +24,7 @@ import { MatDividerModule } from "@angular/material/divider";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatDialogModule } from "@angular/material/dialog";
+import {MatExpansionModule} from '@angular/material/expansion'; 
 
 const MaterialComponents = [
   MatButtonModule,
@@ -53,6 +54,7 @@ const MaterialComponents = [
   MatProgressBarModule,
   MatProgressSpinnerModule,
   MatDialogModule,
+  MatExpansionModule,
 ];
 
 @NgModule({

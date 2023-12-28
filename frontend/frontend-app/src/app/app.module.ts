@@ -12,18 +12,24 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MediaComponent } from './components/media/media.component';
 import { PersonComponent } from './components/person/person.component';
 import { CountryComponent } from './components/country/country.component';
+import { CountryFormComponent } from './components/country-form/country-form.component';
+//import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DisasterComponent, 
-    HeaderComponent, SidenavComponent, MediaComponent, PersonComponent, CountryComponent
+    HeaderComponent, SidenavComponent, MediaComponent, PersonComponent, CountryComponent, CountryFormComponent
+    
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     AppRoutingModule, 
-    HttpClientModule, BrowserAnimationsModule, MaterialModule
+    HttpClientModule, BrowserAnimationsModule, MaterialModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

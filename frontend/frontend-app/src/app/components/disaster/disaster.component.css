@@ -1,0 +1,25 @@
+.mat-table-container {
+  margin: 20px;
+}
+
+.mat-table {
+  background-color: #303030;
+  color: aliceblue;
+}
+
+mat-header-cell {
+  color: #d59306;
+}
+
+mat-cell {
+  color: aliceblue;
+}
+
+mat-form-field {
+  color: #d59306;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: #303030;
+  border-radius: 5px;
+}

@@ -5,10 +5,20 @@
       <app-sidenav></app-sidenav>
     </mat-drawer>
     <mat-drawer-content>
-      <div class="toggle-sidenav-drawer">
-        <button mat-button (click)="drawer.toggle()"></button>
-      </div>
       <router-outlet></router-outlet>
+      <div class="welcome">
+        <h2 class="instructions">
+          Welcome to World Disasters App!
+          <mat-icon fontIcon="warning"> </mat-icon>
+        </h2>
+      </div>
+      <div class="new_graphs">
+        <p class="instructions">
+          Open Dashboard in order to check disasters , media articles etc
+        </p>
+        <mat-icon> switch_access_shortcut</mat-icon>
+      </div>
+
       <!-- <app-archive-telemetry></app-archive-telemetry> -->
       <button class="home" mat-button routerLink="">
         <mat-icon>home</mat-icon>

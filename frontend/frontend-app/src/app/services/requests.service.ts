@@ -44,6 +44,11 @@ export class RequestsService {
     
   }
 
+  deleteCountry(countryName: string): Observable<any> {
+    const url = `${this.baseUrl}/country/${countryName}`;
+    return this.http.delete(url);
+  }
+
   changeTime(time: Date): void {
     this.greekTime.next(new Date(time.getTime()));
 

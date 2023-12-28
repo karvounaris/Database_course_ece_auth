@@ -108,7 +108,6 @@ $primary: mat.define-palette($primary-palette);
 $secondary: mat.define-palette($secondary-palette);
 $warn: mat.define-palette($warn-palette);
 
-//$theme: mat-dark-theme($primary, $secondary, $warn);
 
 $theme: mat.define-dark-theme(
   (

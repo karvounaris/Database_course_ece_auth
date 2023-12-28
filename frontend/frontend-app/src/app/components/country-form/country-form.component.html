@@ -1,0 +1,49 @@
+<form [formGroup]="countryForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Country Name"
+      formControlName="country_name"
+      required
+    />
+    <!-- Add other form controls as needed -->
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Population"
+      formControlName="population"
+      type="number"
+      required
+    />
+    <mat-error *ngIf="countryForm?.get('population')?.hasError('required')"
+      >Population is required</mat-error
+    >
+    <mat-error *ngIf="countryForm?.get('population')?.hasError('min')"
+      >Population must be greater than or equal to 0</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="GDP"
+      formControlName="GDP"
+      type="number"
+      required
+    />
+    <mat-error *ngIf="countryForm?.get('GDP')?.hasError('required')"
+      >GDP is required</mat-error
+    >
+    <mat-error *ngIf="countryForm?.get('GDP')?.hasError('min')"
+      >GDP must be greater than or equal to 0</mat-error
+    >
+  </mat-form-field>
+
+  <!-- Add more form controls and validations as needed -->
+
+  <button mat-raised-button color="primary" [disabled]="!countryForm.valid">
+    Submit
+  </button>
+</form>

@@ -1,4 +1,12 @@
-<div *ngFor="let person of people">
-  {{ person.person_name }}
-  {{ person.person_surname }}
-</div>
+<mat-card appearance="outlined" *ngFor="let person of people" color="accent">
+  <mat-card-header>
+    <mat-card-title>
+      {{ person.person_name }} {{ person.person_surname }}
+    </mat-card-title>
+  </mat-card-header>
+  <div class="icon"><mat-icon fontIcon="person"></mat-icon></div>
+  <mat-card-actions>
+    <div class="status">{{ person.status }}</div>
+  </mat-card-actions>
+</mat-card>
+<!--<div class="status">{{ person.status }}</div>-->

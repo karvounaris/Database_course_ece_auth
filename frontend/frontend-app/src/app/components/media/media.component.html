@@ -1,4 +1,21 @@
-<div *ngFor="let article of media">
-  {{ article.title }}
-  {{ article.author }}
-</div>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let article of media" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ article.title }}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ article.media_type }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>
+      <!-- Display other information in the primary content of the panel -->
+      Author: {{ article.author }}<br />
+      Publication Date: {{ article.publication_date | date : "mediumDate"
+      }}<br />
+      Origin Country: {{ article.origin_country }}<br />
+      Disaster ID: {{ article.disaster_id }}
+      <!-- Add more fields as needed -->
+    </p>
+  </mat-expansion-panel>
+</mat-accordion>
