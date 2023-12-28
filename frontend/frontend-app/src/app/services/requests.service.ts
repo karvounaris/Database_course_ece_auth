@@ -49,6 +49,11 @@ export class RequestsService {
     return this.http.delete(url);
   }
 
+  deletePerson(personId: number): Observable<any> {
+    const url = `${this.baseUrl}/person/${personId}`; // Update with your API path
+    return this.http.delete(url);
+  }
+
   changeTime(time: Date): void {
     this.greekTime.next(new Date(time.getTime()));
 

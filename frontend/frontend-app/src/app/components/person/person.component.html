@@ -1,4 +1,12 @@
 <mat-card appearance="outlined" *ngFor="let person of people" color="accent">
+  <button
+    class="redButton"
+    mat-button
+    (click)="deletePerson(person?.person_id)"
+  >
+    <mat-icon fontIcon="close"></mat-icon>
+  </button>
+
   <mat-card-header>
     <mat-card-title>
       {{ person.person_name }} {{ person.person_surname }}

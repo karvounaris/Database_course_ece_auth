@@ -25,4 +25,20 @@ export class PersonComponent {
     console.log(this.people)
   }
 
+  deletePerson(person_id?: number) {
+    const confirmation = confirm(`Are you sure you want to delete ${person_id}?`);
+    if (confirmation) {
+      this.RequestsService.deletePerson(person_id!).subscribe(
+        () => {
+          // Update your countries array or fetch data again after successful delete
+          // For example, this.countries = this.countries.filter(country => country.country_name !== countryName);
+        },
+        error => {
+          console.error('Error deleting country:', error);
+          // Handle error, show a message, etc.
+        }
+      );
+    }
+  }
+
 }
