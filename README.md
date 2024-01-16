@@ -1,4 +1,7 @@
-# Database_course
+# CrisisMapper
+
+CrisisMapper is a comprehensive world disasters app designed to provide real-time insights, analysis, and tracking of global disasters. Our platform offers a centralized hub for accessing critical information 
+related to natural and human-made disasters, fostering global awareness and facilitating rapid response efforts.
 
 This is a complete application that includes 
 - a database called **world disasters**
